@@ -1,0 +1,8 @@
+{
+    "Id": "MtC.Mod.ChineseParent.RemoveDateAlert",
+    "DisplayName": "移除约会警告 - Remove Date Alert",
+    "Author": "Mr.true.China",
+    "Version": "1.0.0",
+    "AssemblyName": "Remove-Date-Alert.dll",
+    "EntryMethod": "MtC.Mod.ChineseParent.RemoveDateAlert.Main.Load"
+}
