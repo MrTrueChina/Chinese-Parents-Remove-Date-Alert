@@ -43,7 +43,7 @@ namespace MtC.Mod.ChineseParent.RemoveDateAlert
             enabled = value;
 
             // 返回 true 表示这个 Mod 切换到 Mod Manager 切换的状态，返回 false 表示 Mod 依然保持原来的状态
-            return true; // If true, the mod will switch the state. If not, the state will not change.
+            return true;
         }
     }
 
