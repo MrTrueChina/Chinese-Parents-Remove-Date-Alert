@@ -52,49 +52,41 @@ namespace MtC.Mod.ChineseParent.RemoveDateAlert
     /// 女生面板增加恋爱警告值的方法，这个方法会随机增加一定量的恋爱警告值，恋爱警告会根据警告值出现
     /// </summary>
     [HarmonyPatch(typeof(panel_girls), "add_alert")]
-    public static class AddAlertPatch
+    public static class panel_girls_add_alert
     {
-        private static bool Prefix()
+        private static void Postfix()
         {
-            // 如果 Mod 没有启动，直接按照原流程继续调用
+            // 如果 Mod 没有启动，不进行处理
             if (!Main.enabled)
             {
-                return true;
+                return;
             }
 
-            Main.ModEntry.Logger.Log("女生面板增加恋爱警告值方法即将调用");
+            Main.ModEntry.Logger.Log("女生面板增加恋爱警告值方法调用完毕");
 
-            // 阻断对发出警告方法的调用
-            return false;
+            // 将警告值设为 0
+            girlmanager.InstanceGirlmanager.alertness = 0;
         }
     }
 
     /// <summary>
-    /// 男生面板增加恋爱警告值的方法，这个方法和女生面板一样随机增加警告值，但这个方法同时负责调用对话，因此不能直接阻断
+    /// 男生面板增加恋爱警告值的方法，这个方法和女生面板一样随机增加警告值。另外一提，这个方法在原代码中还负责继续向后调用
     /// </summary>
     [HarmonyPatch(typeof(BoysManager), "AddAlert")]
     public static class BoysManager_AddAlert
     {
-        private static bool Prefix(BoysManager __instance, begintalkoverAction completeAction)
+        private static void Postfix(BoysManager __instance)
         {
-            // 如果 Mod 没有启动，直接按照原流程继续调用
+            // 如果 Mod 没有启动，不进行处理
             if (!Main.enabled)
             {
-                return true;
+                return;
             }
 
-            Main.ModEntry.Logger.Log("女生面板增加恋爱警告值方法即将调用");
+            Main.ModEntry.Logger.Log("男生面板增加恋爱警告值方法调用完毕");
 
-            // 以下代码直接复制粘贴自反编译
-
-            // 增加恋爱警告值的代码，注释掉即可
-            //this.alertness += UnityEngine.Random.Range(20, 45);
-
-            // 以下代码直接复制粘贴自反编译
-            open_system.InstanceOpenSystem.AlertTalkInPanel(__instance.alertness, completeAction);
-
-            // 阻断对发出警告方法的调用
-            return false;
+            // 将警告值设为 0
+            __instance.alertness = 0;
         }
     }
 }

@@ -229,3 +229,4 @@ D:\Projects\Unity-Mod-Manager-Mod\Chinese-Parents\Chinese-Parents-Remove-Date-Al
 D:\Projects\Unity-Mod-Manager-Mod\Chinese-Parents\Chinese-Parents-Remove-Date-Alert\Remove-Date-Alert-Sources\bin\Debug\UnityEngine.SharedInternalsModule.dll
 D:\Projects\Unity-Mod-Manager-Mod\Chinese-Parents\Chinese-Parents-Remove-Date-Alert\Remove-Date-Alert-Sources\bin\Debug\UnityEngine.CoreModule.xml
 D:\Projects\Unity-Mod-Manager-Mod\Chinese-Parents\Chinese-Parents-Remove-Date-Alert\Remove-Date-Alert-Sources\bin\Debug\UnityEngine.SharedInternalsModule.xml
+D:\Projects\Unity-Mod-Manager-Mod\Chinese-Parents\Chinese-Parents-Remove-Date-Alert\Remove-Date-Alert-Sources\obj\Debug\Remove-Date-Alert.csprojAssemblyReference.cache
