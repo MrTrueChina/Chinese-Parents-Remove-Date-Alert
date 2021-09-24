@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Remove-Date-Alert</name>
+    </assembly>
+    <members>
+        <member name="P:MtC.Mod.ChineseParent.RemoveDateAlert.Main.ModEntry">
+            <summary>
+            Mod 对象
+            </summary>
+        </member>
+        <member name="F:MtC.Mod.ChineseParent.RemoveDateAlert.Main.enabled">
+            <summary>
+            这个 Mod 是否启动
+            </summary>
+        </member>
+        <member name="M:MtC.Mod.ChineseParent.RemoveDateAlert.Main.OnToggle(UnityModManagerNet.UnityModManager.ModEntry,System.Boolean)">
+            <summary>
+            Mod Manager 对 Mod 进行控制的时候会调用这个方法
+            </summary>
+            <param name="modEntry"></param>
+            <param name="value">这个 Mod 是否激活</param>
+            <returns></returns>
+        </member>
+        <member name="T:MtC.Mod.ChineseParent.RemoveDateAlert.panel_girls_add_alert">
+            <summary>
+            女生面板增加恋爱警告值的方法，这个方法会随机增加一定量的恋爱警告值，恋爱警告会根据警告值出现
+            </summary>
+        </member>
+        <member name="T:MtC.Mod.ChineseParent.RemoveDateAlert.BoysManager_AddAlert">
+            <summary>
+            男生面板增加恋爱警告值的方法，这个方法和女生面板一样随机增加警告值。另外一提，这个方法在原代码中还负责继续向后调用
+            </summary>
+        </member>
+    </members>
+</doc>
